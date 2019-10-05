@@ -42,7 +42,7 @@ bool IfMatch(char *s, int i, char *p, int j) {  //i是字符串s的位置，j是
 	 else  
 		return false;
 }
-IsMatch(char *s, char *p)
+bool IsMatch(char *s, char *p)
 {
   return  IfMatch(s, sizeof(s) - 1, p, sizeof(p) - 1);
 }
