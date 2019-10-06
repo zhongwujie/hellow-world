@@ -1,9 +1,9 @@
 ﻿#include<stdio.h >
 #include<windows.h >
 #include<string.h >
-typedef enum { false = 0, true=1 }bool;
+#include<stdbool.h>
 bool IfMatch(char *s,int i, char *p, int j);
-bool IsMatch(char *s, char *p);//调用bool IfMatch
+bool isMatch(char *s, char *p);//调用bool IfMatch
 #define size 100
 int main(){
 	int status ;//判断最后输出true还是false
@@ -12,7 +12,7 @@ int main(){
 	gets(strings); 
 	printf("请输入字符串p:"); 
 	gets(stringp);  
-	status = IsMatch(strings, stringp);    
+	status = isMatch(strings, stringp);    
 	if (status == 1) 
 		printf("True\n");
 	else if 
@@ -42,7 +42,7 @@ bool IfMatch(char *s, int i, char *p, int j) {  //i是字符串s的位置，j是
 	 else  
 		return false;
 }
-bool IsMatch(char *s, char *p)
+bool isMatch(char *s, char *p)
 {
-  return  IfMatch(s, sizeof(s) - 1, p, sizeof(p) - 1);
+  return  IfMatch(s, strlen(s) - 1, p, strlen(p) - 1);
 }
