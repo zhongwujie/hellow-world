@@ -7,3 +7,6 @@ ___
 2019/10/5  
 I added a function which is called"bool IsMatch(char *s, char *p);"to 
 transfer"bool IfMatch(char *s,int i, char *p, int j)".
+——
+2019/10/6
+我修改了一下text1.c的代码，只要去掉int main()中的函数就能通过leetcode测试
